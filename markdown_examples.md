@@ -116,6 +116,38 @@ item.something = "something else";
 
 ## Tables
 
+| Header 1              | Header 2  | Header 3  |
+| -                     | -         | -         |
+| Column 1              | Column 2  | Column 3  |
+| Column 1              | Column 2  | Column 3  |
+| Column 1 ___________  | Column 2  | Column 3  |
 
+---
+
+| Header        | Header 1          | Header 2      |
+| :-            | :-:               | -:            |
+| Aligned left  | Aligned Center    | Aligned Right |
+
+---
+
+## Custom HTML
+
+<h1> Header 1 with HTML </h1>
+
+# Header 1 with MD
+
+---
+
+## Custom CSS
+
+Testing custom CSS
+
+<div>
+<style>
+    p {
+        color: yellow
+    }
+</style>
+</div>
 
 ---
