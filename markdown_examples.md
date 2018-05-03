@@ -83,13 +83,9 @@ https://github.com/Ho-Wan
 
 ## Image
 
-[vscode_img]:[https://en.wikipedia.org/wiki/Visual_Studio_Code#/media/File:VS_Code_(Insiders).png]
+[vscode_img]:[https://upload.wikimedia.org/wikipedia/en/e/e9/VS_Code_%28Insiders%29.png]
 
 ![VS Code Rocks][vscode_img]
-
-[placeholder_img]:[http://via.placeholder.com/350x150]
-
-![Placeholder image][placeholder_img]
 
 ---
 
