@@ -10,9 +10,10 @@
 		}
 		#content{
 			display: grid;
-			/*grid-template-columns: 30% 20% 50%;*/
-			/*grid-template-columns: 1fr 2fr 1fr;*/
 			grid-template-columns: repeat(3, 1fr);
+			grid-template-rows: repeat(10, minmax(200px, auto));
+			/* grid-auto-rows: minmax(200px, auto); */
+			grid-gap: 10px;
 			max-width: 960px;
 			margin: 0 auto;
 		}
@@ -32,7 +33,8 @@
 
 		<div>1</div>
 		<div>2</div>
-		<div>3</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod pretium interdum. Maecenas condimentum congue turpis, at consectetur tellus tristique vel. Pellentesque dignissim mauris nunc, in tristique ligula facilisis non. Aenean quis nibh at metus semper dapibus vel vitae diam. Vestibulum tincidunt mauris at volutpat posuere. Proin nec egestas nunc. Duis ornare libero et facilisis vestibulum.</div>
+
 		<div>4</div>
 		<div>5</div>
 		<div>6</div>
