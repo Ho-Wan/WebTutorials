@@ -8,71 +8,117 @@
 
 <title>Bootstrap Tutorial</title>
 
-<!-- Old CSS reference has been superseded -->
+<!-- Old Bootstrap 3.3.5 reference has been superseded -->
 <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+<!-- CDN link to bootstrap 4.1.1 -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
 <style>
-    .jumbotron{
-        background-color:#2E2D88;
-        color:white;
-    }
-    /* Adds borders for tabs */
-    .tab-content {
-        border-left: 1px solid #ddd;
-        border-right: 1px solid #ddd;
-        border-bottom: 1px solid #ddd;
-        padding: 10px;
-    }
-    .nav-tabs {
-        margin-bottom: 0;
-    }
+  .jumbotron{
+    background-color:#2E2D88;
+    color:white;
+  }
+  /* Adds borders for tabs */
+  .tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+  }
+  .nav-tabs {
+    margin-bottom: 0;
+  }
 </style>
 
 <head>
 <body>
 
-    <div class="container">
-        <div class="page-header">
-            <h1>Bootstrap Tutorial</h1>
-        </div>
-        <div class="jumbotron">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p>
-                <a href="#" class="btn btn-light btn-lg" role="button">More Info</a>
-                <button type="submit" class="btn btn-danger" role="button">Danger</button>
-                <input type="button" value="Info" class="btn btn-info">
-                <button type="submit" class = "btn btn-primary btn-sm">Primary</button>
-                <button type="submit" class = "btn btn-secondary btn-sm">Secondary</button>
-                <button type="submit" class = "btn btn-success btn-xs">Success</button>
-                <button type="submit" class = "btn btn-warning btn-lg">Warning</button>
-                <button type="submit" class = "btn btn-link btn-lg">Link</button>
-                <!-- disabled button -->
-                <button type="button" class="btn btn-lg btn-primary" disabled>Primary</button>
-                <!-- disabled link -->
-                <a href="#" class="btn btn-light btn-lg disabled" role="button" aria-disabled="true">More Info</a>
-                <!-- group buttons -->
-                <div class="btn-group btn-group-lg" role="group" aria-label="...">
-                    <button type="button" class="btn btn-outline-light">Small</button>
-                    <button type="button" class="btn btn-outline-light">Medium</button>
-                    <button type="button" class="btn btn-outline-light">Large</button>
-                </div>
-
-            </p>
-        </div>
+  <div class="container">
+    <div class="page-header">
+      <h1>Bootstrap Tutorial</h1>
+    </div>
+    <div class="jumbotron">
+      <h2><a href="#jumbo" data-toggle="collapse">Jumbotron</h2>
+      <div id="jumbo" class="collapse show">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <!-- Buttons here -->
+        <p>
+          <a href="#" class="btn btn-light btn-lg" role="button">More Info</a>
+          <button type="submit" class="btn btn-danger" role="button">Danger</button>
+          <input type="button" value="Info" class="btn btn-info">
+          <button type="submit" class = "btn btn-primary btn-sm">Primary</button>
+          <button type="submit" class = "btn btn-secondary btn-sm">Secondary</button>
+          <button type="submit" class = "btn btn-success btn-xs">Success</button>
+          <button type="submit" class = "btn btn-warning btn-lg">Warning</button>
+          <button type="submit" class = "btn btn-link btn-lg">Link</button>
+          <!-- disabled button -->
+          <button type="button" class="btn btn-lg btn-primary" disabled>Primary</button>
+          <!-- disabled link -->
+          <a href="#" class="btn btn-light btn-lg disabled" role="button" aria-disabled="true">Light</a>
+          <!-- group buttons -->
+          <div class="btn-group btn-group-lg" role="group" aria-label="...">
+            <button type="button" class="btn btn-outline-light">Small</button>
+            <button type="button" class="btn btn-outline-light">Medium</button>
+            <button type="button" class="btn btn-outline-light">Large</button>
+          </div>
+        </p>
+      </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+    <!-- hidden cards: well replaced by card in Bootstrap 4 , hidden has been replaced by d-block and d-none -->
+    <!--
+      <div class="hidden_cards">
+        <div class="card card-body bg-light d-block d-sm-none">
+          <p>Screen &lt; 768px</p>
+        </div>
+        <div class="card card-body bg-light d-block d-md-none">
+          <p>Screen &gt; 768px and &lt; 992px</p>
+        </div>
+        <div class="card card-body bg-light d-lg-none">
+          <p>Screen &gt; 992px and &lt; 1200px</p>
+        </div>
+        <div class="card  card-body bg-light">
+          <p>Screen &gt; 1200px</p>
+        </div>
+      </div>
+    -->
+
+    <!-- collapsing columns: collapse in replaced by collapse show -->
+    <!--
+      <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-4 col-xs-12">
+          <h4><a href="#col1Content" data-toggle="collapse">Column1</a></h4>
+          <div id="col1Content" class="collapse show">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-8 col-xs-12">
+          <h4><a href="#col2Content" data-toggle="collapse">Column2</a></h4>
+          <div id="col2Content" class="collapse">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <h4><a href="#col3Content" data-toggle="collapse">Column3</a></h4>
+          <div id="col3Content" class="collapse">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </div>
+        </div>
+      </div>
+    -->
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
 
 </body>
 </head>
