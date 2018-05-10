@@ -9,17 +9,59 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body onload="showDate()">
   <div class="header">
-    <h1>Learning JavaScript</h1>
+    <h1 id="heading">Learning JavaScript</h1>
     <p>With Brad Traversy</p>
   </div>
-
+  <!-- buttons -->
   <div class="container">
+    <button onclick="changeText(this)">Click Me</button>
+    <br>
+    <button onmouseover="showDate()" onmouseout="clearDate()">Show Date</button>
+    <h1 id="time"></h1>
+  </div>
+  <!-- form -->
+  <div class="container">
+    <form action="something.php" method="post" name="myForm"></form>
+    <div>
+      <label>First Name</label>
+      <input type="text" name="firstName" id="firstName">
+    </div>
+    <br />
+    <div>
+      <label>Last Name</label>
+      <input type="text" name="lastName" id="lastName">
+    </div>
+    <br>
 
   </div>
 
   <script>
+    // EVENTS ******************
+    function changeText(id) {
+      id.innerHTML = "You Clicked"
+      let heading = document.getElementById("heading");
+      heading.innerHTML = "You Clicked!";
+    }
+
+    function showDate() {
+      let time = document.getElementById("time");
+      time.innerHTML = Date();
+    }
+
+    function clearDate() {
+      let time = document.getElementById("time");
+      time.innerHTML = "";
+    }
+
+    // FORMS********************
+    function changeBackground(x) {
+      console.log
+    }
+
+
+    // *************************
     // arrays
     var colors = ['red', 'blue', 'green'];
     var colors_alt = new Array('red', 'yellow', 'orange');
@@ -84,19 +126,19 @@
     let apple = new Object();
     apple.color = "red";
     apple.shape = "round";
-    apple.describe = function(){
+    apple.describe = function () {
       // using template literal backslash ` with ${}
       return `An apple is the color ${this.color} and is the shape ${this.shape}`;
     }
     console.log(apple);
 
     // Constructor Pattern
-    function Fruit(name, color, shape){
+    function Fruit(name, color, shape) {
       this.name = name;
       this.color = color;
       this.shape = shape;
 
-      this.describe = function(){
+      this.describe = function () {
         return `A ${this.name} is the color ${this.color} and is the shape ${this.shape}`;
       }
     }
@@ -105,8 +147,7 @@
     console.log(melon.describe());
 
     // Array of objects
-    let users = [
-      {
+    let users = [{
         name: "John Doe",
         age: 30
       },
@@ -120,7 +161,6 @@
       },
     ];
     console.log(users[0])
-
   </script>
 </body>
 
