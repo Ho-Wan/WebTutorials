@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,45 @@
     <title>Learning JavaScript</title>
     <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-<div class="header">
-    <h1>Learning JavaScript</h1>
-    <p>With Brad Traversy</p>
-</div>
+    <div class="header">
+        <h1>Learning JavaScript</h1>
+        <p>With Brad Traversy</p>
+    </div>
 
-<div class="container">
+    <div class="container">
 
-</div>
+    </div>
 
-<script>
-    var number1 = 35;
+    <script>
+        // arrays
+        var colors = ['red', 'blue', 'green'];
+        var colors_alt = new Array('red', 'yellow', 'orange');
+        // dot syntax
+        colors.push('purple');
 
-    alert();
-</script>
+        var numbers = [5, 77, 6, 43];
+        // sort nunmbers alphabetically
+        numbers.sort();
+        // sort numbers numerically
+        numbers.sort(function (a, b) {
+            return a - b
+        });
+        // alert(numbers);
+        numbers.reverse();
+
+        // forEach loop
+        numbers.forEach(function (number) {
+            // console.log(number);
+        });
+
+        if (true === 1) {
+            console.log('This is true');
+        } else {
+            console.log('This is false');
+        }
+    </script>
 </body>
+
 </html>
