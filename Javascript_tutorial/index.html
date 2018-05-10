@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body onload="showDate()">
+<body onload="showDate()" id="body">
   <div class="header">
     <h1 id="heading">Learning JavaScript</h1>
     <p>With Brad Traversy</p>
@@ -23,18 +23,28 @@
   </div>
   <!-- form -->
   <div class="container">
-    <form action="something.php" method="post" name="myForm"></form>
-    <div>
-      <label>First Name</label>
-      <input type="text" name="firstName" id="firstName">
-    </div>
-    <br />
-    <div>
-      <label>Last Name</label>
-      <input type="text" name="lastName" id="lastName">
-    </div>
-    <br>
-
+    <form action="something.php" method="post" name="myForm" onsubmit="return validateForm()">
+      <div>
+        <label>First Name</label>
+        <input type="text" name="firstName" id="firstName">
+      </div>
+      <br />
+      <div>
+        <label>Last Name</label>
+        <input type="text" name="lastName" id="lastName">
+      </div>
+      <br>
+      <div>
+        <label>Background</label>
+        <select name="background" id="background" onchange="changeBackground(this)">
+          <option value="red">Red</option>
+          <option value="blue">Blue</option>
+          <option value="green">Green</option>
+        </select>
+      </div>
+      <br>
+      <input type="submit" value="Submit">
+    </form>
   </div>
 
   <script>
@@ -57,7 +67,24 @@
 
     // FORMS********************
     function changeBackground(x) {
-      console.log
+      console.log(x.value);
+      let heading = document.getElementById("heading");
+      heading.style.color = x.value;
+    }
+
+    // recommend using jQuery to make syntax easier
+    function validateForm() {
+      let firstName = document.forms["myForm"]["firstName"].value;
+
+      if(firstName == null || firstName == "") {
+        alert("First name is required");
+        return false;
+      }
+
+      if (firstName.length < 3) {
+        alert("First name must be at least 3 chars");
+        return false;
+      }
     }
 
 
