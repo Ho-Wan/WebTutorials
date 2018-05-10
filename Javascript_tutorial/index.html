@@ -2,51 +2,126 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Learning JavaScript</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Learning JavaScript</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="header">
-        <h1>Learning JavaScript</h1>
-        <p>With Brad Traversy</p>
-    </div>
+  <div class="header">
+    <h1>Learning JavaScript</h1>
+    <p>With Brad Traversy</p>
+  </div>
 
-    <div class="container">
+  <div class="container">
 
-    </div>
+  </div>
 
-    <script>
-        // arrays
-        var colors = ['red', 'blue', 'green'];
-        var colors_alt = new Array('red', 'yellow', 'orange');
-        // dot syntax
-        colors.push('purple');
+  <script>
+    // arrays
+    var colors = ['red', 'blue', 'green'];
+    var colors_alt = new Array('red', 'yellow', 'orange');
+    // dot syntax
+    colors.push("purple");
 
-        var numbers = [5, 77, 6, 43];
-        // sort nunmbers alphabetically
-        numbers.sort();
-        // sort numbers numerically
-        numbers.sort(function (a, b) {
-            return a - b
-        });
-        // alert(numbers);
-        numbers.reverse();
+    var numbers = [5, 77, 6, 43];
+    // sort nunmbers alphabetically
+    numbers.sort();
+    // sort numbers numerically
+    numbers.sort(function (a, b) {
+      return a - b
+    });
+    console.log(numbers);
+    numbers.reverse();
 
-        // forEach loop
-        numbers.forEach(function (number) {
-            // console.log(number);
-        });
+    // forEach loop
+    numbers.forEach(function (number) {
+      console.log(number);
+    });
+    // true == 1 is true, true === 1 is false
+    if (true == 1) {
+      console.log("This is true");
+    } else {
+      console.log("This is false");
+    }
+    // switch case
 
-        if (true === 1) {
-            console.log('This is true');
-        } else {
-            console.log('This is false');
-        }
-    </script>
+    let fruit = "apple";
+    switch (fruit) {
+      case "banana":
+        console.log("I hate bananas");
+        break;
+      case "apple":
+        console.log("I love apples");
+        break;
+      case "oranges":
+        console.log("oranges are ok");
+        break;
+      default:
+        console.log("I love all other fruits");
+    }
+
+    // Object Literal
+    let person = {
+      firstName: "Brad",
+      lastName: "Traversy",
+      age: 34,
+      children: ["Brianna", "Nicholas"],
+      address: {
+        street: "555 Something st",
+        city: "Boston",
+        state: "MA"
+      },
+      fullName: function () {
+        return this.firstName + " " + this.lastName;
+      }
+    }
+    console.log(person.fullName());
+
+    // Object Constructor - Direct
+    let apple = new Object();
+    apple.color = "red";
+    apple.shape = "round";
+    apple.describe = function(){
+      // using template literal backslash ` with ${}
+      return `An apple is the color ${this.color} and is the shape ${this.shape}`;
+    }
+    console.log(apple);
+
+    // Constructor Pattern
+    function Fruit(name, color, shape){
+      this.name = name;
+      this.color = color;
+      this.shape = shape;
+
+      this.describe = function(){
+        return `A ${this.name} is the color ${this.color} and is the shape ${this.shape}`;
+      }
+    }
+    let apple_new = new Fruit("apple", "red", "round");
+    let melon = new Fruit("melon", "green", "round");
+    console.log(melon.describe());
+
+    // Array of objects
+    let users = [
+      {
+        name: "John Doe",
+        age: 30
+      },
+      {
+        name: "Mark Smith",
+        age: 44
+      },
+      {
+        name: "Shelly Williams",
+        age: 20
+      },
+    ];
+    console.log(users[0])
+
+  </script>
 </body>
 
 </html>
