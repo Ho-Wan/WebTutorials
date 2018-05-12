@@ -5,11 +5,13 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel = "stylesheet" href="style.css">
    <title>DevTools Sandbox</title>
 </head>
 
 <body>
-   <h1>Devtools Sandbox</h1>
+   <h1>Devtools Playground</h1>
+   <button>Get Users</button>
 
    <script>
       // console.log('Hello');
@@ -25,7 +27,7 @@
       // console.groupEnd('End of Hello');
 
       // console.time('For loop');
-      // for (let i = 0; i < 2000; i++) {
+      // for (let i = 0; i < 20000; i++) {
       //    console.log(i);
       // }
       // console.timeEnd('For loop');
@@ -34,6 +36,26 @@
       //    console.assert(x > y, {"message":"x is not greater than y", "x":x, "y": y});
       // }
       // greaterThan(4, 5);
+
+      // document.querySelector('button').addEventListener('click', getUsers);
+      // function getUsers() {
+      //   var xhr = new XMLHttpRequest();
+      //   xhr.open('GET', 'https://api.github.com/users', true);
+      //   xhr.onload = function(){
+      //     if(this.status == 200){
+      //       console.log('Users returned');
+      //     }
+      //   }
+      //   xhr.send();
+      // }
+
+      localStorage.setItem('name', 'John');
+      // console.log(localStorage.getItem('name', 'John'));
+      // localStorage.clear('name');
+      sessionStorage.setItem('car', 'BMW');
+
+      document.cookie = "username=John Doe";
+
    </script>
 </body>
 
