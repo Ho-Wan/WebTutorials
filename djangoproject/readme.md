@@ -2,3 +2,5 @@
 
 based on youtube "Python Django Crash Course" by Travery Media
 https://www.youtube.com/watch?v=D6esTdOLXh4&t=2724s
+
+# use "python manage.py runserver" to run
