@@ -28,7 +28,9 @@ app.set('view engine', 'pug');
 
 // Body Parser middleware
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 
 // parse application/json
 app.use(bodyParser.json());
@@ -50,6 +52,15 @@ app.get('/', function (req, res) {
   });
 });
 
+// Get Single Article
+app.get('/article/:id', function (req, res) {
+  Article.findById(req.params.id, function(err, article) {
+    res.render('article', {
+      article: article
+    });
+  });
+});
+
 // Add Route
 app.get('/articles/add', function (req, res) {
   res.render('add_article', {
@@ -63,7 +74,7 @@ app.post('/articles/add', function (req, res) {
   article.author = req.body.author;
   article.body = req.body.body;
 
-  article.save(function(err) {
+  article.save(function (err) {
     if (err) {
       console.log(err);
       return;
