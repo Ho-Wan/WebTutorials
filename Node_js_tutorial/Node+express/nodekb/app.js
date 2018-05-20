@@ -87,7 +87,20 @@ app.get('/articles/add', function (req, res) {
 });
 
 // Add Submit POST Route
-app.post('/articles/add', function (req, res) {
+app.post('/articles/add',
+  [
+    check('title', 'Title is required').isLength({ min: 1 }),
+    check('author', 'Author is required').isLength({ min: 1 }),
+    check('body', 'Body is required').isLength({ min: 1 })
+  ],
+  function (req, res) {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    res.render('add_article', {
+      title:'Add Article',
+      errors: errors.array()
+    });
+  }
   let article = new Article();
   article.title = req.body.title;
   article.author = req.body.author;
