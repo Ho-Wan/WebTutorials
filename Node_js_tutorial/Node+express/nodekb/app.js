@@ -140,8 +140,10 @@ app.delete('/article/:id', function(req, res){
   Article.remove(query, function(err){
     if (err) {
       console.log(err);
+    } else {
+      req.flash('danger', 'Article deleted');
+      res.send('Success');
     }
-    res.send('Success');
   });
 });
 
