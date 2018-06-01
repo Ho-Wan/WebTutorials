@@ -1,16 +1,15 @@
 body {
-  margin-top: 55px;
   font-family: Raleway, sans-serif;
 }
 
 .navbar {
-  font-size: 1.2em;
+  font-size: 1.3em;
   min-height: 40px !important;
 }
 
 .navbar-nav>a,
 .navbar-brand {
-  padding-top: 10px !important;
+  padding-top: 5px !important;
   padding-bottom: 10px !important;
   height: 40px;
   margin-left: 10px;
@@ -38,7 +37,7 @@ body {
 }
 
 .carousel-inner {
-  max-height: 90vh;
+  max-height: 100vh;
 }
 
 .carousel-caption {
@@ -66,6 +65,15 @@ body {
   color: white;
 }
 
+.font-s1 {
+  font-size: 0.8em;
+  line-height: 1.0em;
+}
+
+.final-quote {
+  font-size: 2em;
+}
+
 footer {
   width: 100%;
   color: #fff;
@@ -86,6 +94,10 @@ footer {
 }
 
 @media (max-width: 600px) {
+  body {
+    margin-top: 55px;
+  }
+
   h2 {
     font-size: 1.5em;
   }
@@ -106,5 +118,9 @@ footer {
 
   .line-break {
     font-size: 0pt;
+  }
+
+  .final-quote {
+    font-size: 1em;
   }
 }
