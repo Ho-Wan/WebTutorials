@@ -24,6 +24,8 @@ var cells, rule;
 var isUserInteracting, pause, pauseCam, radX, radY, camRadius, rotateX, rotateY;
 // light rotation
 var dirLightMain, lightRadX, lightRadY, lightRadius, lightRotateX, lightRotateY, lightHue;
+// document container
+var container;
 
 // set initial variables here
 function initVariables() {
@@ -60,8 +62,12 @@ function initVariables() {
     lightHue = 0;
     // following variables intended to be left as default
     CELLSIZE = 1;
-    HEIGHT = window.innerHeight;
-    WIDTH = window.innerWidth;
+    // HEIGHT = window.innerHeight;
+    // WIDTH = window.innerWidth;
+    // HEIGHT = $('#threejs').height();
+    // WIDTH = $('#threejs').width();
+    HEIGHT = container.clientHeight;
+    WIDTH = container.clientWidth;
     previousStateTime = new Date().getTime();
     previousSpawnTime = previousStateTime;
     iterationCount = 0;
@@ -71,13 +77,18 @@ function initVariables() {
 }
 // init scene, camera, renderer;
 function initScene() {
+    // get HTML container
+    container = document.getElementById('threejs');
+
     // initialize variables
     initVariables();
     scene = new THREE.Scene();
+    scene.background = new THREE.Color( 0x1e1e1e);
     camera = new THREE.PerspectiveCamera(FOV, WIDTH / HEIGHT, 0.1, 200);
     renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(WIDTH, HEIGHT);
-    document.body.appendChild(renderer.domElement);
+    container.appendChild(renderer.domElement);
+    // document.body.appendChild(renderer.domElement);
     // set renderer properties
     renderer.shadowCameraFov = camera.fov;
     renderer.shadowMapBias = 0.001;

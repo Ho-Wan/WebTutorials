@@ -5,8 +5,7 @@ body {
 /* navbar */
 .navbar {
   font-size: 1.3em;
-  min-height: 40px !important;
-  height: 60px;
+  min-height: 60px;
 }
 
 .navbar-nav>a,
@@ -115,10 +114,12 @@ footer {
   h2 {
     font-size: 1.5em;
   }
+
   .carousel-caption {
     top: 40%;
     transform: translateY(-50%);
   }
+
   .text {
     font-size: 16pt;
     line-height: 18pt;
