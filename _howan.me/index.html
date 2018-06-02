@@ -57,7 +57,8 @@
               <p class="line-break">
                 <br/>
               </p>
-              <button class="btn btn-about">Find out more!</button>
+              <button class="btn btn-about" id="about-btn" >Find out more!</button>
+              <!-- onclick="document.getElementById('about-me').scrollIntoView();" -->
             </div>
           </div>
           <div class="carousel-item">
@@ -81,15 +82,17 @@
 
   <!-- 2:about -->
   <br>
-  <div class="container">
+  <div class="container" id="about-me">
     <div class="text-center">
-      <h2><b>ABOUT ME</b></h2>
+      <h2>
+        <b>ABOUT ME</b>
+      </h2>
       <p>My passion is solving problems and developing solutions that the world needs.</p>
       <p>I pursue simple and scalable solutions over complex and bespoke.</p>
       <br>
     </div>
     <div class="row">
-      <div class="col-md-5 text-center">
+      <div class="col-md-6 text-center">
         <h3>Software Engineer</h3>
         <img src="img/i_coding.jpg" class="img-fluid">
         <div class="text-left">
@@ -107,30 +110,25 @@
           <br>
         </div>
       </div>
-      <div class="col-md-2"></div>
-      <div class="col-md-5 text-center">
+      <div class="col-md-6 text-center">
         <h3>Structural Engineer</h3>
         <img src="img/i_construction.jpg" class="img-fluid">
-        <div class="text-left" >
-          <h4>Headlines</h4>
+        <div class="text-left">
+          <h4>Experience</h4>
           <ul>
             <li>100 Bishopsgate - Core Design Lead</li>
             <li>Nova Victoria - Project Engineer</li>
             <li>Finite Element/ Lateral Stability Expert</li>
           </ul>
-          <p>I am an experienced structural engineer and have worked as a senior engineer / project engineer on a number of prestigious construction projects around London, having led a small team.</p>
+          <p>I am an experienced structural engineer and have worked as a senior engineer / project engineer on a number of
+            prestigious construction projects around London.</p>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 3:notes -->
-  <br>
-  <div class="container">
-    <div class="text-center final-quote">
-      <p><i>When something is important enough, you do it even if the odds are not in your favour.</i></p>
-    </div>
-  </div>
+  <!-- 3:misc -->
+
   <!-- 4:footer -->
   <br>
   <footer class="container-fluid bg-blue text-center">
@@ -145,12 +143,14 @@
   </footer>
 
   <!-- end footer -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
     crossorigin="anonymous"></script>
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"></script> -->
+        crossorigin="anonymous"></script> -->
+  <script src="js/main.js"></script>
+
 </body>
 
 </html>
