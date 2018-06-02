@@ -22,12 +22,7 @@ body {
 }
 
 .bg-blue {
-  background-color: #1565c0AA;
-}
-
-.font-blue {
-  color: #1565c0;
-  font-weight: bold;
+  background-color: #1565c0DD;
 }
 
 /* carousel */
@@ -51,6 +46,22 @@ body {
   line-height: 36pt;
 }
 
+.font-blue {
+  color: #1565c0;
+  font-weight: bold;
+}
+
+.font-white {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.font-black {
+  text-shadow: 1px;
+  color: #000000;
+  font-weight: bold;
+}
+
 .line-break {
   font-size: 5pt;
 }
@@ -62,11 +73,12 @@ body {
 }
 
 .btn-about:hover {
-  background-color: #1565c0AA;
+  background-color: #1565c0DD;
   color: white;
 }
 
 /* About */
+
 li {
   line-height: 2.0em;
 }
@@ -75,14 +87,14 @@ li {
   padding: 0 20px 0 20px;
 }
 
-.about-img {
+.img-hoverable {
   border: 5px;
   transition:all 0.3s ease-in-out;
 }
 
-.about-img:hover {
-  transform: scale(0.95);
-  box-shadow: 10px 10px #1565c0AA;
+.img-hoverable:hover {
+  transform: scale(1.02);
+  box-shadow: 10px 10px #1565c0DD;
 }
 
 /* footer */
@@ -108,7 +120,7 @@ footer {
 
 @media (max-width: 600px) {
   body {
-    margin-top: 55px;
+    margin-top: 60px;
   }
 
   h2 {
