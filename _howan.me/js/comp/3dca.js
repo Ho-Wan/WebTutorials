@@ -4,6 +4,8 @@
  * Originally created using Processing, now created using three.js
 */
 
+// Show stats?
+var show_stats = false;
 // three.js scene variables
 var scene, camera, renderer, orbitCam, stats;
 // screen variables
@@ -62,10 +64,6 @@ function initVariables() {
     lightHue = 0;
     // following variables intended to be left as default
     CELLSIZE = 1;
-    // HEIGHT = window.innerHeight;
-    // WIDTH = window.innerWidth;
-    // HEIGHT = $('#threejs').height();
-    // WIDTH = $('#threejs').width();
     HEIGHT = container.clientHeight;
     WIDTH = container.clientWidth;
     previousStateTime = new Date().getTime();
@@ -88,7 +86,6 @@ function initScene() {
     renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
     renderer.setSize(WIDTH, HEIGHT);
     container.appendChild(renderer.domElement);
-    // document.body.appendChild(renderer.domElement);
     // set renderer properties
     renderer.shadowCameraFov = camera.fov;
     renderer.shadowMapBias = 0.001;
@@ -106,9 +103,11 @@ function initScene() {
     window.addEventListener('resize', onWindowResize, false);
 
     // add stats - 0: fps, 1: ms, 2: mb, 3+: custom
-    // stats = new Stats();
-    // stats.showPanel(0);
-    // document.body.appendChild(stats.dom);
+    stats = new Stats();
+    stats.showPanel(0);
+    if (show_stats) {
+        container.appendChild(stats.dom);
+    }
 
     // init functions
     createLights();
@@ -380,7 +379,6 @@ function getCellState() {
             }
         }
     }
-
 }
 // sets nextState of cell depending on rules
 function setNextState(i, j, k, aliveCount) {
@@ -534,7 +532,7 @@ function callCheckTime() {
 }
 // animation loop
 function animate() {
-    // stats.begin();
+    stats.begin();
     requestAnimationFrame(animate);
     TWEEN.update();
 
@@ -543,7 +541,7 @@ function animate() {
     callCheckTime();
 
     renderer.render(scene, camera);
-    // stats.end();
+    stats.end();
 }
 // main function
 function main() {

@@ -19,23 +19,8 @@
 <body>
   <div id="home"></div>
   <!-- 0:navbar -->
-  <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-blue">
-    <div class="container-fluid">
-      <a class="navbar-brand fab fa-houzz fa-2x link-smooth" href="/index.html#home" dest="home"></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link link-smooth active" href="/index.html#home" dest="about-me">ABOUT</a>
-          <a class="nav-item nav-link link-smooth" href="/index.html#software" dest="software">SOFTWARE</a>
-          <a class="nav-item nav-link link-smooth" href="/index.html#structures" dest="structures">STRUCTURES</a>
-          <a class="nav-item nav-link link-smooth" href="/comp/" dest="">COMPUTATION</a>
-        </div>
-      </div>
-    </div>
-  </nav>
+  <div id="import-navbar"></div>
+
   <!-- 1:carousel -->
   <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
     <div class="container-fluid flex">
@@ -54,7 +39,6 @@
                 <br> I'm an engineer.</br>
               </div>
               <p class="line-break"></p>
-              <!-- button links to #about me using smooth scoll with jQuery -->
               <button class="btn btn-about link-smooth" dest="about-me">Find out more!</button>
             </div>
           </div>
@@ -100,8 +84,8 @@
               <li> JavasSript: Node.js, Express, Angular</li>
               <li>Python: Django</li>
               <li>MongoDB, MySQL, PostgreSQL</li>
+            </b>
           </ul>
-          </b>
           <div class="font-s1">
             <p>Secondary languages: C#, C++, Java</p>
             <p>3D toolsets: Unity3D, three.js, processing</p>
@@ -126,7 +110,8 @@
           </b>
           <p>I am an experienced structural engineer and have worked as a senior engineer / project engineer on a number of
             prestigious construction projects around London.</p>
-          <p>I have worked with top clients such as Land Securities, Lend Lease, Brookfield, Mace, and many well respected architects in London.</p>
+          <p>I have worked with top clients such as Land Securities, Lend Lease, Brookfield, Mace, and many well respected architects
+            in London.</p>
         </div>
       </div>
     </div>
@@ -136,14 +121,7 @@
 
   <!-- 4:footer -->
   <br>
-  <footer class="container-fluid bg-blue text-center">
-    <div class="info-box">
-      <div class="footnote">HO-WAN TO &copy;2018</span>
-        <a href="https://www.linkedin.com/in/howanto/" class="fab fa-linkedin"></a>
-        <a href="https://github.com/ho-wan" class="fab fa-github"></a>
-      </div>
-    </div>
-  </footer>
+  <div id="import-footer"></div>
 
   <!-- HOSTED -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -152,6 +130,12 @@
     crossorigin="anonymous"></script>
   <!-- LOCAL -->
   <script src="js/index.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#import-navbar').load("/import/import.html #import-navbar-in");
+      $('#import-footer').load("/import/import.html #import-footer-in");
+    });
+  </script>
 
 </body>
 
