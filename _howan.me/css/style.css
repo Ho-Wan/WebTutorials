@@ -6,6 +6,7 @@ body {
 .navbar {
   font-size: 1.3em;
   min-height: 40px !important;
+  height: 60px;
 }
 
 .navbar-nav>a,
@@ -22,11 +23,10 @@ body {
 }
 
 .bg-blue {
-  background-color: #1565c0;
-  opacity: 0.8;
+  background-color: #1565c0AA;
 }
 
-.color-blue {
+.font-blue {
   color: #1565c0;
   font-weight: bold;
 }
@@ -88,13 +88,13 @@ li {
 
 /* footer */
 footer {
-  width: 100%;
-  color: #fff;
-  padding: 5px 0 10px 0;
+  font-size: 1.3em;
+  color: #ffffff;
+  height: 60px;
 }
 
 .fab {
-  padding: 20px;
+  padding: 15px 0px 0 10px;
   font-size: 30px;
   color: #fff;
 }
@@ -136,7 +136,5 @@ footer {
 
   .font-s1 {
     font-size: 0.8em;
-    /* line-height: 0.8em; */
   }
-
 }
