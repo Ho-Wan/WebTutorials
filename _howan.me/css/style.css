@@ -2,6 +2,7 @@ body {
   font-family: Raleway, sans-serif;
 }
 
+/* navbar */
 .navbar {
   font-size: 1.3em;
   min-height: 40px !important;
@@ -30,6 +31,7 @@ body {
   font-weight: bold;
 }
 
+/* carousel */
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
   width: 2em;
@@ -65,20 +67,30 @@ body {
   color: white;
 }
 
+/* About */
 li {
   line-height: 2.0em;
 }
 
-
-
-.final-quote {
-  font-size: 2em;
+.about-col{
+  padding: 0 20px 0 20px;
 }
 
+.about-img {
+  border: 5px;
+  transition:all 0.3s ease-in-out;
+}
+
+.about-img:hover {
+  transform: scale(0.95);
+  box-shadow: 10px 10px #1565c0AA;
+}
+
+/* footer */
 footer {
   width: 100%;
   color: #fff;
-  padding: 10px 0 20px 0;
+  padding: 5px 0 10px 0;
 }
 
 .fab {
@@ -87,6 +99,7 @@ footer {
   color: #fff;
 }
 
+/* @media */
 @media (max-height: 500px) {
   .carousel-caption {
     top: 40%;

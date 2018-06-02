@@ -17,22 +17,21 @@
 </head>
 
 <body>
+  <div id="home"></div>
   <!-- 0:navbar -->
   <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-blue">
     <div class="container-fluid">
-      <a class="navbar-brand fab fa-houzz fa-2x" href="#"></a>
+      <a class="navbar-brand fab fa-houzz fa-2x link-smooth" href="#" dest="home"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false"
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="myNavbar">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link active" href="#">ABOUT
-            <span class="sr-only">(current)</span>
-          </a>
-          <a class="nav-item nav-link" href="#">SOFTWARE</a>
-          <a class="nav-item nav-link" href="#">STRUCTURES</a>
-          <a class="nav-item nav-link" href="#">COMPUTATION</a>
+          <a class="nav-item nav-link link-smooth active" href="#" dest="about-me">ABOUT</a>
+          <a class="nav-item nav-link link-smooth" href="#" dest="software">SOFTWARE</a>
+          <a class="nav-item nav-link link-smooth" href="#" dest="structures">STRUCTURES</a>
+          <a class="nav-item nav-link link-smooth" href="#">COMPUTATION</a>
         </div>
       </div>
     </div>
@@ -52,13 +51,11 @@
             <div class="carousel-caption">
               <div class="text">Hello, I'm
                 <span class="color-blue">Ho-Wan</span>.
-                <br> I'm an engineer.
+                <br> I'm an engineer.</br>
               </div>
-              <p class="line-break">
-                <br/>
-              </p>
-              <button class="btn btn-about" id="about-btn" >Find out more!</button>
-              <!-- onclick="document.getElementById('about-me').scrollIntoView();" -->
+              <p class="line-break"></p>
+              <!-- button links to #about me using smooth scoll with jQuery -->
+              <button class="btn btn-about link-smooth" dest="about-me">Find out more!</button>
             </div>
           </div>
           <div class="carousel-item">
@@ -81,45 +78,45 @@
   </div>
 
   <!-- 2:about -->
-  <br>
+  <br></br>
   <div class="container" id="about-me">
     <div class="text-center">
       <h2>
         <b>ABOUT ME</b>
       </h2>
-      <p>My passion is solving problems and developing solutions that the world needs.</p>
-      <p>I pursue simple and scalable solutions over complex and bespoke.</p>
-      <br>
+      <p>My passion is solving problems and developing solutions the world needs.</p>
+      <p>I value simple, scalable and functional solutions over complex and bespoke.</p>
+      <br></br>
     </div>
     <div class="row">
-      <div class="col-md-6 text-center">
+      <div class="col-md-6 text-center about-col" id="software">
         <h3>Software Engineer</h3>
-        <img src="img/i_coding.jpg" class="img-fluid">
+        <img src="img/i_coding.jpg" class="img-fluid about-img">
         <div class="text-left">
           <h4>Focus</h4>
-          <ul>
-            <li>Javascript: Express + Node.js</li>
+          <ul><b>
+            <li> JavasSript: Node.js, Express, Angular</li>
             <li>Python: Django</li>
             <li>MongoDB, MySQL, PostgreSQL</li>
-          </ul>
+          </ul></b>
           <div class="font-s1">
             <p>Additional languages: C#, C++, Java</p>
             <p>3D toolsets: Unity3D, three.js, processing</p>
-            <p>Front-end: Bootstrap, React, Angular, CSS Grid</p>
+            <p>Front-end: Bootstrap, React, jQuery</p>
           </div>
-          <br>
+          <br></br>
         </div>
       </div>
-      <div class="col-md-6 text-center">
+      <div class="col-md-6 text-center about-col" id="structures">
         <h3>Structural Engineer</h3>
-        <img src="img/i_construction.jpg" class="img-fluid">
+        <img src="img/i_construction.jpg" class="img-fluid about-img">
         <div class="text-left">
           <h4>Experience</h4>
-          <ul>
+          <ul><b>
             <li>100 Bishopsgate - Core Design Lead</li>
             <li>Nova Victoria - Project Engineer</li>
             <li>Finite Element/ Lateral Stability Expert</li>
-          </ul>
+          </ul></b>
           <p>I am an experienced structural engineer and have worked as a senior engineer / project engineer on a number of
             prestigious construction projects around London.</p>
         </div>
@@ -142,14 +139,11 @@
     </div>
   </footer>
 
-  <!-- end footer -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-    crossorigin="anonymous"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script> -->
-  <script src="js/main.js"></script>
+  <!-- HOSTED -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  <!-- LOCAL -->
+  <script src="js/index.js"></script>
 
 </body>
 
