@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "C:\\Users\\howan\\envs\\py1\\Scripts\\python.exe"
+    // "python.pythonPath": "C:\\Users\\howan\\envs\\py1\\Scripts\\python.exe",
+    "python.pythonPath": "C:\\Users\\howan\\envs\\django1\\Scripts\\python.exe",
+    "python.linting.pylintEnabled": false,
+
+    "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe"
 }
